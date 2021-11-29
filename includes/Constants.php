@@ -7,3 +7,8 @@
     define('USER_CREATED', 101);
     define('USER_EXISTS', 102);
     define('USER_FAILURE', 103);
+
+    define('USER_CREATED', 101);
+    define('USER_EXISTS', 102);
+    define('USER_FAILURE', 103); 
+    define('USER_AUTHENTICATED', 201);
