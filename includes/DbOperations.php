@@ -107,6 +107,14 @@
             return $users; 
         }
 
+        public function deleteUser($id){
+            $stmt = $this->con->prepare("DELETE FROM users WHERE id = ?");
+            $stmt->bind_param("i", $id);
+            if($stmt->execute())
+                return true; 
+            return false; 
+        }
+
         public function updateUser($email, $name, $school, $id){
             $stmt = $this->con->prepare("UPDATE users SET email = ?, name = ?, school = ? WHERE id = ?");
             $stmt->bind_param("sssi", $email, $name, $school, $id);
